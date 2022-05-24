@@ -1,5 +1,7 @@
 package main
 
+// https://leetcode.com/problems/search-insert-position
+
 func searchInsert(nums []int, target int) int {
 	var search func(i, j int) int
 	search = func(i, j int) int {

@@ -1,5 +1,7 @@
 package main
 
+// https://leetcode.com/problems/valid-parentheses
+
 func isValid(s string) bool {
 	i := 0
 	stack := make([]rune, len(s))

@@ -1,5 +1,7 @@
 package main
 
+// https://leetcode.com/problems/maximum-subarray
+
 // related: #3
 
 func max(a, b int) int {
