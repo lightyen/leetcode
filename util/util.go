@@ -10,10 +10,6 @@ type Value interface {
 	uint | int | float64 | string | byte | bool
 }
 
-type Arr[T Value] interface {
-	~[]T
-}
-
 var ErrFailed = errors.New("failed")
 
 func Expect[T Value](t *testing.T, received T, expected T) {
@@ -45,6 +41,12 @@ func ExpectArray[T Value](t *testing.T, received []T, expected []T) {
 type ListNode[T Value] struct {
 	Val  T
 	Next *ListNode[T]
+}
+
+type TreeNode[T Value] struct {
+	Val   T
+	Left  *TreeNode[T]
+	Right *TreeNode[T]
 }
 
 func ListToArray[T Value](list *ListNode[T]) []T {
