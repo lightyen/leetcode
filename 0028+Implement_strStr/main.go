@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // https://leetcode.com/problems/implement-strstr/
 
 // KMP method
@@ -74,8 +72,4 @@ func kmpFindIndex(s string, pat string) int {
 		j = table[j]
 	}
 	return -1
-}
-
-func main() {
-	fmt.Println(buildTable("aabcx"))
 }
